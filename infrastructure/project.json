@@ -1,8 +1,8 @@
 {
-  "name": "..-infrastructure",
+  "name": "infrastructure",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/../infrastructure/src",
+  "sourceRoot": "infrastructure/src",
   "targets": {
     "deploy": {
       "executor": "@ago-dev/nx-aws-cdk-v2:deploy",

@@ -1,6 +1,6 @@
 {
   "app": "npx ts-node src/main.ts",
-  "output": "../dist/apps/..-infrastructure",
+  "output": "../dist/infrastructure",
   "requireApproval": "never",
   "watch": {
     "include": ["**"],
