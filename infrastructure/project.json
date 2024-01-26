@@ -1,0 +1,35 @@
+{
+  "name": "..-infrastructure",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/../infrastructure/src",
+  "targets": {
+    "deploy": {
+      "executor": "@ago-dev/nx-aws-cdk-v2:deploy",
+      "options": {}
+    },
+    "destroy": {
+      "executor": "@ago-dev/nx-aws-cdk-v2:destroy",
+      "options": {}
+    },
+    "bootstrap": {
+      "executor": "@ago-dev/nx-aws-cdk-v2:bootstrap",
+      "options": {}
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/../infrastructure/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "infrastructure/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
